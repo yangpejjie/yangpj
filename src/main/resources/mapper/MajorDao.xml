@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jianbo.platform.dao.MajorDao">
+
+	<!-- 通用查询映射结果 -->
+	<resultMap id="BaseResultMap" type="com.jianbo.platform.entity.Major">
+		<id column="id" property="id" />
+		<result column="majorId" property="majorId" />
+		<result column="courseType" property="courseType" />
+		<result column="module1" property="module1" />
+		<result column="module2" property="module2" />
+		<result column="module3" property="module3" />
+		<result column="module4" property="module4" />
+		<result column="module5" property="module5" />
+		<result column="module6" property="module6" />
+		<result column="module7" property="module7" />
+		<result column="module8" property="module8" />
+		<result column="module9" property="module9" />
+		<result column="module10" property="module10" />
+		<result column="module11" property="module11" />
+		<result column="module12" property="module12" />
+		<result column="module13" property="module13" />
+		<result column="module14" property="module14" />
+		<result column="module15" property="module15" />
+		<result column="module16" property="module16" />
+		<result column="isDelte" property="isDelte" />
+		<result column="createTime" property="createTime" />
+		<result column="modefyTime" property="modefyTime" />
+	</resultMap>
+
+</mapper>

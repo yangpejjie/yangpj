@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jianbo.platform.dao.UserDao">
+
+	<!-- 通用查询映射结果 -->
+	<resultMap id="BaseResultMap" type="com.jianbo.platform.entity.User">
+		<id column="id" property="id" />
+		<result column="userId" property="userId" />
+		<result column="nick" property="nick" />
+		<result column="pass" property="pass" />
+		<result column="phone" property="phone" />
+		<result column="male" property="male" />
+		<result column="position" property="position" />
+		<result column="company" property="company" />
+		<result column="sign" property="sign" />
+		<result column="mail" property="mail" />
+		<result column="isBindMail" property="isBindMail" />
+		<result column="realName" property="realName" />
+		<result column="graduateSchool" property="graduateSchool" />
+		<result column="entranceDate" property="entranceDate" />
+		<result column="education" property="education" />
+		<result column="schoolCertify" property="schoolCertify" />
+		<result column="errCount" property="errCount" />
+		<result column="deviceId" property="deviceId" />
+		<result column="isVerify" property="isVerify" />
+		<result column="isDelte" property="isDelte" />
+		<result column="createTime" property="createTime" />
+		<result column="modefyTime" property="modefyTime" />
+	</resultMap>
+
+</mapper>
