@@ -1,21 +1,26 @@
 package com.jianbo.platform.entity;
 
 import java.io.Serializable;
-
-import com.baomidou.mybatisplus.enums.IdType;
 import java.util.Date;
-import com.baomidou.mybatisplus.annotations.TableId;
+
+import org.springframework.stereotype.Component;
+
 import com.baomidou.mybatisplus.activerecord.Model;
-import java.io.Serializable;
+import com.baomidou.mybatisplus.annotations.TableId;
+import com.baomidou.mybatisplus.enums.IdType;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 /**
  * 购物车
  */
+@Component
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Cart extends Model<Cart> {
 
     private static final long serialVersionUID = 1L;
 
 	@TableId(value="id", type= IdType.AUTO)
+	
 	private Long id;
 	private String userId;
 	private String courseId;

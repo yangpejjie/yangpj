@@ -1,30 +1,32 @@
 package com.jianbo.platform.controller;
 
 
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.jianbo.platform.entity.Cart;
-import com.jianbo.platform.servce.impl.CartServiceImpl;
+import com.jianbo.platform.servce.CartService;
 
 /**
  * 购物车 前端控制器
  */
-@RestController
+@Controller
 @RequestMapping("/cart")
 public class CartController {
 	
 	@Autowired
-	private CartServiceImpl cartService;
+	private CartService cartService;
 	
+	@ResponseBody
 	@RequestMapping("/test")
-	public Object getString() {
+	public Object getString(Model model) {
 		
-		List<Cart> list = cartService.getAllCart();
-		
-		return list;
+//		Cart list = cartService.getCart();
+//		List<Cart> list = cartService.getAllCart();
+		int ret = cartService.insert();
+		System.out.println(ret);
+		return ret;
 	}
 }

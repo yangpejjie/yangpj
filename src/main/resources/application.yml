@@ -25,6 +25,7 @@ spring:
     # 指定静态资源的路径
     resources:
         static-locations: classpath:/static/,classpath:/views/
+
 #mybatis
 mybatis-plus:
   mapper-locations: classpath:/mapper/**/*Dao.xml
@@ -36,7 +37,8 @@ mybatis-plus:
     #字段策略 0:"忽略判断",1:"非 NULL 判断"),2:"非空判断"
     field-strategy: 2
     #驼峰下划线转换
-    db-column-underline: true
+    db-column-underline: false
+    
     #刷新mapper 调试神器
     refresh-mapper: true
     #数据库大写下划线转换
@@ -51,7 +53,7 @@ mybatis-plus:
     #自定义SQL注入器
     #sql-injector: com.jianbo.platform.xxx
   configuration:
-    map-underscore-to-camel-case: true
+    map-underscore-to-camel-case: false
     cache-enabled: false
 #热部署配置
 devtools:
@@ -60,3 +62,6 @@ devtools:
   restart:
     enabled: true
     additional-exclude: views/**
+
+    
+    
